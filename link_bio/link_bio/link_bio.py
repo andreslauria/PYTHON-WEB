@@ -5,7 +5,8 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.text("Hola mundo desde Reflex")
+    return rx.text("Hola mundo desde Reflex", color="blue")
+
 
 
 

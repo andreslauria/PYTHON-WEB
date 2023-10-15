@@ -61,7 +61,7 @@ export default function Component() {
   <Fragment/>
 )}
 </Fragment>
-  <Text>
+  <Text sx={{"color": "blue"}}>
   {`Hola mundo desde Reflex`}
 </Text>
   <NextHead>
