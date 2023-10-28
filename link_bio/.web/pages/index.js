@@ -3,7 +3,8 @@ import { useRouter } from "next/router"
 import { Event, getAllLocalStorageItems, getRefValue, getRefValues, isTrue, preventDefault, refs, spreadArraysOrObjects, uploadFiles, useEventLoop } from "/utils/state"
 import { EventLoopContext, initialEvents, StateContext } from "/utils/context.js"
 import "focus-visible/dist/focus-visible"
-import { Box, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, useColorMode } from "@chakra-ui/react"
+import { Avatar, Box, Button, Image, Link, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Stack, Text, useColorMode, VStack } from "@chakra-ui/react"
+import NextLink from "next/link"
 import NextHead from "next/head"
 
 
@@ -61,9 +62,59 @@ export default function Component() {
   <Fragment/>
 )}
 </Fragment>
-  <Text sx={{"color": "blue"}}>
-  {`Hola mundo desde Reflex`}
+  <VStack>
+  <Stack sx={{"position": "sticky", "bg": "blue", "paddingX": "16px", "paddingY": "8px", "zIndex": "99"}}>
+  <Text sx={{"height": "40px"}}>
+  {`mouredev`}
 </Text>
+</Stack>
+  <VStack>
+  <Avatar name={`Brais Moure`} size={`xl`}/>
+  <Text>
+  {`@mouredev`}
+</Text>
+  <Text>
+  {`HOLA 👋🏼 MI NOMBRE ES BRAIS MOURE`}
+</Text>
+  <Text>
+  {`Soy ingeniero de software desde hace más de 12 años. 
+                Actualmente trabajo como freelance full-stack developer iOS y Android. 
+                Además creo contenido formativo sobre programación y tecnología en redes.
+                Aquí podrás encontrar todos mis enlaces de interés. ¡Bienvenid@!`}
+</Text>
+</VStack>
+  <VStack>
+  <Link as={NextLink} href={`https://www.twitch.tv/mouredev`} isExternal={true}>
+  <Button>
+  {`Twitch`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://www.youtube.com/@mouredev`} isExternal={true}>
+  <Button>
+  {`YouTube`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://www.youtube.com/@mouredevtv`} isExternal={true}>
+  <Button>
+  {`Youtube (Canal secundario)`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://www.mouredev.com/discord`} isExternal={true}>
+  <Button>
+  {`Discord`}
+</Button>
+</Link>
+</VStack>
+  <VStack>
+  <Image src={`favicon.ico`}/>
+  <Link as={NextLink} href={`https://mouredev.com`}>
+  {`© 2014-2023 MOUREDEV BY BRAIS MOURE V3.`}
+</Link>
+  <Text>
+  {` BUILDING SOFTWARE WITH ♥ FROM GALICIA TO THE WORLD.`}
+</Text>
+</VStack>
+</VStack>
   <NextHead>
   <title>
   {`Reflex App`}
